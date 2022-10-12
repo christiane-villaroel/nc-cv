@@ -20,6 +20,6 @@ export const selectCampsiteByID = (id) =>{
     return CAMPSITES.find((campsite) => campsite.id === parseInt(id));
 };
 
-export const selectFeatureCampsite =(state) =>{
-    return state.campsite.campsiteArray.find((campsite) => campsite.featured );
+export const selectFeaturedCampsite =(state) =>{
+    return state.campsites.campsiteArray.find((campsite) => campsite.featured );
 }
