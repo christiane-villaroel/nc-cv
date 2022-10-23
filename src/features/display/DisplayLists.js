@@ -11,11 +11,10 @@ const DisplayList = () =>{
         selectFeaturedPartner(state)
     ]);
 
-    console.log('items Look for image:', items)
+    console.log('items Look for UNDEFINED ITEMS:', items)
     return (
         <Row>
             {items.map((item, idx) => {
-                console.log("single item", item)
                 return (
                     <Col md className="m-1" key={idx}>
                         <DisplayCard item={item} />
