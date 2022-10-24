@@ -9,20 +9,20 @@ const CampsitesList = () =>{
     console.log('campsites:',campsites);
 
     const isLoading =  useSelector((state) => state.campsites.isLoading);
-    const errMsg = useSelector ((state) => state.campsites.errMsg);
+    const errMsg = useSelector((state) => state.campsites.errMsg);
 
-    if(isLoading){
+    if (isLoading) {
         return (
             <Row>
-                <Loading/>
+                <Loading />
             </Row>
         );
     }
 
-    if(errMsg){
-        return(
+    if (errMsg) {
+        return (
             <Row>
-                <Error errMsg={errMsg}/>
+                <Error errMsg={errMsg} />
             </Row>
         );
     }

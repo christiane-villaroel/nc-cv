@@ -14,7 +14,7 @@ const DisplayList = () =>{
         selectFeaturedPartner(state)
     ]);
 
-    console.log('items Look for UNDEFINED ITEMS:', items)
+
     return (
         <Row>
             {items.map((item, idx) => {

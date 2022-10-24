@@ -14,26 +14,27 @@ const CampsiteDetailPage = ()=>{
     console.log('campsite:',campsite);
 
     const isLoading = useSelector((state) => state.campsites.isLoading);
-    const errMsg = useSelector((state)=> state.campsites.errMsg);
+    const errMsg = useSelector((state) => state.campsites.errMsg);
     let content = null;
 
-    if(isLoading){
-        content = <Loading/>;
-    }else if (errMsg){
-        content = <Error errMsg={errMsg} />
-    }else {
-        content =(
+    if (isLoading) {
+        content = <Loading />;
+    } else if (errMsg) {
+        content = <Error errMsg={errMsg} />;
+    } else {
+        content = (
             <>
-                 <CampsiteDetail campsite={campsite}/>
-                <CommentList campsiteId={campsiteId}/>
+                <CampsiteDetail campsite={campsite} />
+                <CommentList campsiteId={campsiteId} />
             </>
-        )
+        );
     }
     return (
         <Container>
-            {campsite && <SubHeader current={campsite.name} detail={true}/>}
+            {campsite && <SubHeader current={campsite.name} detail={true} />}
             <Row>{content}</Row>
         </Container>
+
     )
 }
 export default CampsiteDetailPage;

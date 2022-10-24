@@ -1,9 +1,10 @@
 import { Col } from "reactstrap";
 
-const Error = ({ErrorMsg}) => {
+const Error = (props) => {
+    console.log("ERROR MESSAGE", props.errMsg)
     return (
-        <Col>
-            <h4>{ErrorMsg}</h4>
+        <Col md='5' className='m-1'>
+            <h4>{props.errMsg}</h4>
         </Col>
     );
 };

@@ -12,7 +12,7 @@ import CampsiteDetailPage from './pages/CampsiteDetailPage';
 import {fetchCampsites} from './features/campsites/campsitesSlice';
 import {fetchPartners} from './features/partners/partnersSlice';
 import {fetchPromotions} from './features/promotions/promotionsSlice';
-
+import {etchComments, fetchComments} from './features/comments/CommentSlice'
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +20,7 @@ function App() {
     dispatch(fetchCampsites());
     dispatch(fetchPartners());
     dispatch(fetchPromotions());
+    dispatch(fetchComments());
 }, [dispatch]);
 
 
